@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["jerry@listia.com"]
 
   spec.summary       = %q{test}
-  spec.homepage      = "none"
+  spec.homepage      = "http://www.google.com"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'

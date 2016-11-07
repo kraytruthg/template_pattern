@@ -1,18 +1,12 @@
 class StoreOrder
+  include TemplatePattern
   def initialize(is_gift: false)
     @is_gift = is_gift
   end
 
-  def process_order
-    choose_goods
-    process_payment
-    package if is_gift?
-    deliver
-  end
-
   private
 
-  def choose_goods
+  def pick_goods
     puts "Customer chooses item from shelf"
   end
 
@@ -21,10 +15,14 @@ class StoreOrder
   end
 
   def package
-    puts "Wraps goods"
+    if @is_gift
+      puts "Wraps goods"
+    else
+      return nil
+    end
   end
 
-  def deliver
+  def send_out
     puts "Delivers in counter"
   end
 
