@@ -1,14 +1,4 @@
-class StoreOrder
-  def initialize(is_gift: false)
-    @is_gift = is_gift
-  end
-
-  def process_order
-    choose_goods
-    process_payment
-    package if is_gift?
-    deliver
-  end
+class StoreOrder < TemplatePattern::Order
 
   private
 
@@ -20,10 +10,6 @@ class StoreOrder
     puts "Pays at counter through POS"
   end
 
-  def package
-    puts "Wraps goods"
-  end
-
   def deliver
     puts "Delivers in counter"
   end
@@ -31,4 +17,5 @@ class StoreOrder
   def is_gift?
     @is_gift
   end
+
 end
