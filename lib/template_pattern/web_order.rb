@@ -1,11 +1,4 @@
-class WebOrder
-  def process_order
-    pick_goods
-    process_payment
-    package
-    send_out
-  end
-
+class WebOrder < TemplatePattern::Order
   private
 
   def pick_goods
@@ -20,7 +13,7 @@ class WebOrder
     puts "Wraps goods"
   end
 
-  def send_out
+  def deliver
     puts "Ships the item through post to customer"
   end
 end
