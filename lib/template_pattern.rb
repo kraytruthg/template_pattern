@@ -1,39 +1,33 @@
 require "template_pattern/version"
-
 module TemplatePattern
   class Order
-
-    def initialize(is_gift: false)
-      @is_gift = is_gift
-    end
-
     def process_order
       choose_goods
       process_payment
-      package
+      package  if is_gift?
       deliver
     end
 
     private
 
     def choose_goods
-      raise NotImplementedError
+      fail NotImplementedError
     end
 
     def process_payment
-      raise NotImplementedError
+      fail NotImplementedError
     end
 
     def package
-      puts "Wraps goods" if is_gift?
+      puts "Wraps goods"
     end
 
     def deliver
-      raise NotImplementedError
+      fail NotImplementedError
     end
 
     def is_gift?
-      raise NotImplementedError
+      true
     end
   end
 

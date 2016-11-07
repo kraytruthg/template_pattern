@@ -16,8 +16,4 @@ class WebOrder < TemplatePattern::Order
   def send_out
     puts "Ships the item through post to customer"
   end
-
-  def is_gift?
-    true
-  end
 end
