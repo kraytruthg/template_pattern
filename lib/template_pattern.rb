@@ -1,6 +1,13 @@
 require "template_pattern/version"
 
 module TemplatePattern
+  def process_order
+    pick_goods
+    process_payment
+    package
+    send_out
+  end
+
   def pick_goods
     puts "Picks goods from warehouse"
   end
