@@ -6,11 +6,6 @@ class StoreOrder
   end
 
   def process_order
-    # choose_goods
-    # process_payment
-    # package if is_gift?
-    # deliver
-
     pick_goods
     process_payment
     package if is_gift?
