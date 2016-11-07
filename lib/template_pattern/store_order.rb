@@ -1,13 +1,10 @@
 class StoreOrder
+  include TemplatePattern
+
+  # attr_reader :is_gift?
+
   def initialize(is_gift: false)
     @is_gift = is_gift
-  end
-
-  def process_order
-    choose_goods
-    process_payment
-    package if is_gift?
-    deliver
   end
 
   private

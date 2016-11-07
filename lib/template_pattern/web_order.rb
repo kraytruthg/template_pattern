@@ -1,14 +1,11 @@
 class WebOrder
-  def process_order
-    pick_goods
-    process_payment
-    package
-    send_out
-  end
+  include TemplatePattern
+
+  attr_reader :is_gift
 
   private
 
-  def pick_goods
+  def choose_goods
     puts "Picks goods from warehouse"
   end
 
@@ -20,7 +17,11 @@ class WebOrder
     puts "Wraps goods"
   end
 
-  def send_out
+  def deliver
     puts "Ships the item through post to customer"
+  end
+
+  def is_gift?
+    true
   end
 end
