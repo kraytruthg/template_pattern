@@ -2,9 +2,8 @@ require "template_pattern/version"
 
 module TemplatePattern
   class Base
-    
-    def initialize(is_gift: false)
-      @is_gift = is_gift
+
+    def initialize
     end
 
     def process_order
@@ -33,7 +32,7 @@ module TemplatePattern
     end
 
     def is_gift?
-      @is_gift
+      true
     end
   end
 

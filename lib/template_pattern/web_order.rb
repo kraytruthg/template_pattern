@@ -1,9 +1,5 @@
 class WebOrder < TemplatePattern::Base
 
-  def initialize
-    @is_gift = true
-  end
-
   private
 
   def choose_goods
