@@ -1,10 +1,5 @@
 class WebOrder
-  def process_order
-    pick_goods
-    process_payment
-    package
-    send_out
-  end
+  include TemplatePattern
 
   private
 
@@ -16,11 +11,7 @@ class WebOrder
     puts "Online payment through Netbanking"
   end
 
-  def package
-    puts "Wraps goods"
-  end
-
-  def send_out
+  def deliver
     puts "Ships the item through post to customer"
   end
 end
