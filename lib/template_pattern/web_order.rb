@@ -3,7 +3,7 @@ class WebOrder
     pick_goods
     process_payment
     package
-    deliver
+    send_out
   end
 
   private
@@ -20,7 +20,7 @@ class WebOrder
     puts "Wraps goods"
   end
 
-  def deliver
+  def send_out
     puts "Ships the item through post to customer"
   end
 end

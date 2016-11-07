@@ -1,14 +1,18 @@
 class StoreOrder
+  def initialize(is_gift: false)
+    @is_gift = is_gift
+  end
+
   def process_order
-    pick_goods
+    choose_goods
     process_payment
-    package
+    package if is_gift?
     deliver
   end
 
   private
 
-  def pick_goods
+  def choose_goods
     puts "Customer chooses item from shelf"
   end
 
@@ -22,5 +26,9 @@ class StoreOrder
 
   def deliver
     puts "Delivers in counter"
+  end
+
+  def is_gift?
+    @is_gift
   end
 end
