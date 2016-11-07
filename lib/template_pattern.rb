@@ -16,19 +16,19 @@ module TemplatePattern
     private
 
     def choose_goods
-      puts "Customer chooses item from shelf"
+      raise NotImplementedError
     end
 
     def process_payment
-      puts "Pays at counter through POS"
+      raise NotImplementedError
     end
 
     def package
-      puts "Wraps goods"
+      raise NotImplementedError
     end
 
     def deliver
-      puts "Delivers in counter"
+      raise NotImplementedError
     end
 
     def is_gift?
